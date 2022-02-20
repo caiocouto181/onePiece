@@ -1,0 +1,320 @@
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body
+{
+    background-color: #535353;
+}
+body::-webkit-scrollbar 
+{
+    width: 5px;               
+}
+  
+body::-webkit-scrollbar-track 
+{
+    background: #53535300;       
+}
+  
+body::-webkit-scrollbar-thumb 
+{
+    background-color: rgb(255, 255, 255);    
+    border-radius: 20px;      
+} 
+header
+{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0px;
+    padding-top: 5px;
+    background-color: #ffffff7a;
+    backdrop-filter: blur(15px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+.logo
+{
+    overflow: hidden;
+    display: inline-block;
+}
+.logo > img
+{
+    width: 60px;
+}
+.menu
+{
+    display: inline-block;
+    justify-content: center;
+}
+.menu > a
+{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding-left: 20px;
+}
+.menuMobile
+{
+    margin-right: 10px;
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+.menuMobile > span
+{
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #353535;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition:  .25s ease-in-out;
+}
+.menuMobile > span:nth-child(1)
+{
+    top: 5px;
+}
+.menuMobile > span:nth-child(2)
+{
+    top: 5px;
+}
+.menuMobile > span:nth-child(3)
+{
+    top: 15px;
+}
+.menuMobile > span:nth-child(4)
+{
+    top: 25px;
+}
+.menuMobile.open > span:nth-child(1)
+{
+    width: 0%;
+    left: 50%;
+    opacity: 0;
+}
+.menuMobile.open > span:nth-child(2)
+{
+    top: 15px;
+    transform: rotate(45deg);
+}
+.menuMobile.open > span:nth-child(3)
+{
+    transform: rotate(-45deg);
+}
+.menuMobile.open > span:nth-child(4)
+{
+    width: 0%;
+    left: 50%;
+    opacity: 0;
+}
+.opcoes
+{
+    display: none;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.opcoes::after, .opcoes::before
+{
+    content: "";
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: black;
+}
+.opcoes > a
+{
+    padding: 30px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding-left: 20px;
+}
+.opcoes.openOpcoes
+{
+    display: flex;
+}
+.imagemInicioContainer > img
+{
+    width: 100%;
+    margin: auto;
+}
+.grid
+{
+    margin: auto;
+    margin-top: 3PX;
+    margin-bottom: 8PX;
+    color: white;
+    width: 700px;
+    height: 500px;
+    padding: 0px;
+    display: grid;
+    gap: 8px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.item
+{
+
+    align-items: stretch;
+    color: black;
+    padding-top: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color:#fefefe;
+}
+.item:not(:nth-of-type(5))
+{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.item:hover
+{
+    border: 2px solid #535353;
+}
+.item:first-of-type
+{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 3;
+    border-radius: 8px;
+    background-image: url(./img/one-piece-2_1xby.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.item:nth-of-type(n + 2)
+{
+    border-radius: 8px;
+}
+.item:nth-of-type(4)
+{
+    color: white;
+    background-color: #353535;
+}
+.item:nth-of-type(6)
+{
+    color: white;
+    background-color: #cab4b0;
+}
+.item:nth-of-type(5)
+{
+    z-index: -1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.item:nth-of-type(5) > img
+{
+    width: 121px;
+    transform: translateX(-2px);
+}
+.item:nth-of-type(8)
+{
+    background-image: url(./img/Akuma-no-Mi-One-Piece-1.jpg);
+    background-position: center;
+    background-size: cover;
+} 
+footer
+{
+    width: 100%;
+    height: 90px;
+    background-color: #535353;
+}
+footer::before
+{
+    content: "";
+    width: 80%;
+    height: 1px;
+    background-color: white;
+    display: block;
+    margin: auto;
+}
+footer > p
+{
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 20px;
+}
+@media screen and (max-width: 700px) 
+{
+.grid
+    {
+        padding: 5px;
+        width: 500px;
+        height: 1200px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+}
+@media screen and (max-width: 500px) 
+{
+header:not(.opcoes)
+{
+    justify-content: space-between;
+    align-items:flex-start;
+}
+header.openHeader
+{
+    transition: all .5s ease-in-out;
+    height: 100vh;
+}
+.menu
+{
+    display: none;
+}
+.menuMobile
+{
+    display: block;
+}
+.grid
+    {
+        padding: 5px;
+        width: 360px;
+        height: 900px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+}
+@media screen and (max-width: 350px) 
+{
+.item
+{
+    font-size: 1rem;
+}
+.grid
+    {
+        padding: 5px;
+        width: 270px;
+        height: 700px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+}
